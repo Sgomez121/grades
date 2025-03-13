@@ -12,9 +12,7 @@ double credits;
 
 
     public String toString() {
-        return "Subject{" +
-                "title='" + title + '\'' +
-                ", credits=" + credits +
-                '}';
+        return "Title: "+this.title+" "+"Credits: "+this.credits;
+
     }
 }
