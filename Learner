@@ -5,12 +5,10 @@ public class Learner implements Assessments{
     double grade;
     Course course;
     double gradeScore;
-    Learner(String name, double grade, Course course, double gradeScore) {
+    Learner(String name, Course course) {
         //TODO 2: complete constructor
         this.name = name;
-        this.grade = grade;
         this.course = course;
-        this.gradeScore =gradeScore;
     }
 
     public String toString() {
