@@ -3,10 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 //        //TODO 8: declare and initialize the object of ClassroomCourse class
-//        Subject subject = new Subject("math",5);
-//        ClassroomCourse classroomCourse = new ClassroomCourse(subject,"steve",200,"wilson","session");
-//        //TODO 9: declare and initialize the Learner object
-//        Learner learner = new Learner("bob",56,classroomCourse,98);
+
             Scanner keyboard= new Scanner(System.in);
         System.out.println("Please enter your name:");
         String name = keyboard.nextLine();
@@ -14,7 +11,7 @@ public class Main {
             Subject subject1=new Subject("Java", 3);
             Subject subject2=new Subject("Java Online", 4);
 
-          //Course course1=null;
+          Course course1=null;
 //        //TODO 18: display course list and accept user choice
 
         System.out.println("Select a course to continue:");
@@ -27,43 +24,30 @@ public class Main {
         //TODO 19: initialize object of chose course
 
        if(choice ==1 || choice ==3 ){
-          ClassroomCourse classroomCourse= new ClassroomCourse(subject1, name, 100, "Wilson","spring");
+          //ClassroomCourse classroomCourse= new ClassroomCourse(subject1, name, 100, "Wilson","spring");
+         course1= new ClassroomCourse(subject1, name, 100, "Wilson","spring");
 
-           Learner learner = new Learner(name,57, classroomCourse,98);
-           System.out.println("Enter assignment marks (max 100 for classroom course, 30 for online course)");
-           int mark1 = keyboard.nextInt();
-           System.out.println("Enter quiz marks (max 30 for classroom course, 10 for online course)");
-           int mark2 = keyboard.nextInt();
-           learner.assignmentScore(mark1);
-           learner.quizScore(mark2);
-           String title=learner.course.subject.title;
-           System.out.println("Grade score: " + learner.calculateGrade());
-           if (learner.gradeScore>=5)
-               System.out.println("Congrats"+learner.name
-                       +" you have successfully passed the "+title+" course");
-           else
-               System.out.println("Congrats "+learner.name
-                       +" you have successfully completed the "+title+" course");
+
        }
        if(choice ==2 || choice ==4){
-          OnlineCourse onlineCourse = new OnlineCourse(subject2,name,80,5,10);
-           Learner learner = new Learner(name,57, onlineCourse,98);
-           System.out.println("Enter assignment marks (max 100 for classroom course, 30 for online course)");
-           int mark1 = keyboard.nextInt();
-           System.out.println("Enter quiz marks (max 30 for classroom course, 10 for online course)");
-           int mark2 = keyboard.nextInt();
-           learner.assignmentScore(mark1);
-           learner.quizScore(mark2);
-           String title=learner.course.subject.title;
-           System.out.println("Grade score: " + learner.calculateGrade());
-           if (learner.gradeScore>=5)
-               System.out.println("Congrats"+learner.name
-                       +" you have successfully passed the "+title+" course");
-           else
-               System.out.println("Congrats "+learner.name
-                       +" you have successfully completed the "+title+" course");
-       }
+          course1 = new OnlineCourse(subject2,name,80);
 
+       }
+        Learner learner = new Learner(name, course1);
+        System.out.println("Enter assignment marks (max 100 for classroom course, 30 for online course)");
+        int mark1 = keyboard.nextInt();
+        System.out.println("Enter quiz marks (max 30 for classroom course, 10 for online course)");
+        int mark2 = keyboard.nextInt();
+        learner.assignmentScore(mark1);
+        learner.quizScore(mark2);
+        String title=learner.course.subject.title;
+        System.out.println("Grade score: " + learner.calculateGrade());
+        if (learner.gradeScore>=5)
+            System.out.println("Congrats"+learner.name
+                    +" you have successfully passed the "+title+" course");
+        else
+            System.out.println("Congrats "+learner.name
+                    +" you have successfully completed the "+title+" course");
 
             //TODO 20: accept user input for learner's name
     }
