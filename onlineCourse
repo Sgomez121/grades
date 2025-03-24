@@ -1,10 +1,10 @@
 class OnlineCourse extends Course  {
-    //TODO 15: include videoLessons and weeks attributes
+
     int lessons;
     int weeks;
     OnlineCourse(Subject subject, String instructor, int fee) {
         super(subject, instructor, fee);
-        //TODO 16: initialize other attributes
+    
         this.lessons= 5;
         this.weeks =3;
 
