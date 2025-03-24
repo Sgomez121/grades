@@ -3,7 +3,7 @@ String title;
 double credits;
 
     Subject(String title, double credits) {
-        // TODO 4 Include the instance variables -
+        // Include the instance variables -
         //  title(a string) and credits(double) and
         //  define the class constructor
         this.title= title;
