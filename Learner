@@ -1,12 +1,12 @@
 // make Learner class implement Assessment interface
 public class Learner implements Assessments{
-    //TODO 1: declare instance variables
+    //declare instance variables
     String name;
     double grade;
     Course course;
     double gradeScore;
     Learner(String name, Course course) {
-        //TODO 2: complete constructor
+       
         this.name = name;
         this.course = course;
     }
