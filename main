@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-//        //TODO 8: declare and initialize the object of ClassroomCourse class
+  // declare and initialize the object of ClassroomCourse class
 
             Scanner keyboard= new Scanner(System.in);
         System.out.println("Please enter your name:");
@@ -12,7 +12,7 @@ public class Main {
             Subject subject2=new Subject("Java Online", 4);
 
           Course course1=null;
-//        //TODO 18: display course list and accept user choice
+//  display course list and accept user choice
 
         System.out.println("Select a course to continue:");
         System.out.println("1. Java");
@@ -21,10 +21,10 @@ public class Main {
         System.out.println("4. JavaScript Online");
         System.out.print("Enter your choice (1, 2, 3, 4): ");
         int choice = keyboard.nextInt();
-        //TODO 19: initialize object of chose course
+        //initialize object of chose course
 
        if(choice ==1 || choice ==3 ){
-          //ClassroomCourse classroomCourse= new ClassroomCourse(subject1, name, 100, "Wilson","spring");
+        
          course1= new ClassroomCourse(subject1, name, 100, "Wilson","spring");
 
 
@@ -49,6 +49,6 @@ public class Main {
             System.out.println("Congrats "+learner.name
                     +" you have successfully completed the "+title+" course");
 
-            //TODO 20: accept user input for learner's name
+          
     }
 }
